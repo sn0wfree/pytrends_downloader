@@ -4,7 +4,7 @@ import json
 import pandas as pd
 import requests
 
-HOST = '45.63.75.54'
+HOST = '154.209.64.104'
 PORT = 5672
 url = f"http://{HOST}:{PORT}/google_trends/test"
 
@@ -22,6 +22,6 @@ def get_trends(kw_list, cat=12, timeframe='all', geo='', gprop=''):
 
 
 if __name__ == '__main__':
-    df = get_ticker(kw_list=['tisd'])
+    df = get_trends(kw_list=['tisd',])
     print(df)
     pass

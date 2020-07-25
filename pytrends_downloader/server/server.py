@@ -14,9 +14,11 @@ async def greet_world(req, resp, *, greeting):
     if greeting == 'test':
         pass
     settings = req.params
+    print(settings)
 
     default_parameters = dict(cat=12, timeframe='all', geo='', gprop='')
     default_parameters.update(settings)
+    print(default_parameters)
 
     resp.media = get_pytrends(**default_parameters)
 
