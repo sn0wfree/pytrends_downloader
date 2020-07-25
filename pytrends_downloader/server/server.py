@@ -15,6 +15,7 @@ async def greet_world(req, resp, *, greeting):
         pass
     settings = req.params
     print(settings)
+    settings['cat'] = int(settings.get('cat', default=12))
 
     default_parameters = dict(cat=12, timeframe='all', geo='', gprop='')
     default_parameters.update(settings)
